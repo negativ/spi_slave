@@ -1,0 +1,8 @@
+module top(input clk,
+			  input reset,
+			  input sck,
+			  input ss,
+			  input mosi,
+			  output miso);
+			  
+endmodule

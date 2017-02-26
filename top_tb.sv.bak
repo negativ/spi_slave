@@ -1,0 +1,9 @@
+`timescale 10 ns/ 5 ns
+module top_tb();
+
+logic clk = '0;
+
+always
+	
+
+endmodule

@@ -1,0 +1,15 @@
+/home/cyanide/FPGA/spi/top.sv {1 {vlog -work work -sv -stats=none /home/cyanide/FPGA/spi/top.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} /home/cyanide/FPGA/spi/top_tb.sv {1 {vlog -work work -sv -stats=none /home/cyanide/FPGA/spi/top_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module top_tb
+
+Top level modules:
+	top_tb
+
+} {} {}}

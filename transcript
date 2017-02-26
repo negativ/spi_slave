@@ -1,0 +1,223 @@
+# Loading project spi_sim
+# Compile of top_tb.sv was successful.
+vsim work.top_tb
+# vsim work.top_tb 
+# Start time: 22:46:11 on Feb 26,2017
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.spi_slave
+# ** Warning: (vsim-3839) /home/cyanide/FPGA/spi/top_tb.sv(12): Variable '/top_tb/q', driven via a port connection, is multiply driven. See /home/cyanide/FPGA/spi/top_tb.sv(25).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb File: /home/cyanide/FPGA/spi/top_tb.sv
+# ** Warning: (vsim-3839) /home/cyanide/FPGA/spi/top_tb.sv(11): Variable '/top_tb/ready', driven via a port connection, is multiply driven. See /home/cyanide/FPGA/spi/top_tb.sv(25).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb File: /home/cyanide/FPGA/spi/top_tb.sv
+# ** Warning: (vsim-3839) /home/cyanide/FPGA/spi/top_tb.sv(9): Variable '/top_tb/miso', driven via a port connection, is multiply driven. See /home/cyanide/FPGA/spi/top_tb.sv(25).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb File: /home/cyanide/FPGA/spi/top_tb.sv
+add wave -position end  sim:/top_tb/clk
+add wave -position end  sim:/top_tb/reset
+add wave -position end  sim:/top_tb/sck
+add wave -position end  sim:/top_tb/ss
+add wave -position end  sim:/top_tb/mosi
+add wave -position end  sim:/top_tb/miso
+add wave -position end  sim:/top_tb/sck_en
+add wave -position end  sim:/top_tb/ready
+add wave -position end  sim:/top_tb/q
+add wave -position end  sim:/top_tb/d
+add wave -position end  sim:/top_tb/mosi_data
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 22:51:00 on Feb 26,2017, Elapsed time: 0:04:49
+# Errors: 0, Warnings: 3
