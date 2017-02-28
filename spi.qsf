@@ -75,3 +75,4 @@ set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-
 set_global_assignment -name SYSTEMVERILOG_FILE top_tb.sv
 set_location_assignment PIN_38 -to led
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led
+set_global_assignment -name SYSTEMVERILOG_FILE spi_master.sv

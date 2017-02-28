@@ -1,0 +1,12 @@
+module spi_master(input logic clk,
+						input logic reset,
+						input logic starttx,
+						input logic [7:0] d,
+						input logic miso,
+						output logic ss,
+						output logic sck,
+						output logic mosi,
+						output logic [7:0] q,
+						output logic finished);
+						
+endmodule
