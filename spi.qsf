@@ -76,3 +76,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE top_tb.sv
 set_location_assignment PIN_38 -to led
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led
 set_global_assignment -name SYSTEMVERILOG_FILE spi_master.sv
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name SYSTEMVERILOG_FILE spi_master_tb.sv

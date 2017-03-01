@@ -22,21 +22,21 @@ reset => d[7].ACLR
 sck => spi_slave:s_slave.sck
 ss => spi_slave:s_slave.ss
 mosi => spi_slave:s_slave.mosi
-miso <= spi_slave:s_slave.miso
-led <= spi_slave:s_slave.finished
+miso << spi_slave:s_slave.miso
+led << spi_slave:s_slave.finished
 m_miso => spi_master:s_master.miso
-m_ss <= spi_master:s_master.ss
-m_sck <= <GND>
-m_mosi <= spi_master:s_master.mosi
-m_q[0] <= spi_master:s_master.q[0]
-m_q[1] <= spi_master:s_master.q[1]
-m_q[2] <= spi_master:s_master.q[2]
-m_q[3] <= spi_master:s_master.q[3]
-m_q[4] <= spi_master:s_master.q[4]
-m_q[5] <= spi_master:s_master.q[5]
-m_q[6] <= spi_master:s_master.q[6]
-m_q[7] <= spi_master:s_master.q[7]
-m_finished <= spi_master:s_master.finished
+m_ss << spi_master:s_master.ss
+m_sck << <GND>
+m_mosi << spi_master:s_master.mosi
+m_q[0] << spi_master:s_master.q[0]
+m_q[1] << spi_master:s_master.q[1]
+m_q[2] << spi_master:s_master.q[2]
+m_q[3] << spi_master:s_master.q[3]
+m_q[4] << spi_master:s_master.q[4]
+m_q[5] << spi_master:s_master.q[5]
+m_q[6] << spi_master:s_master.q[6]
+m_q[7] << spi_master:s_master.q[7]
+m_finished << spi_master:s_master.finished
 
 
 |top|spi_slave:s_slave
@@ -133,7 +133,6 @@ clk => sck_clk_counter[1].CLK
 clk => sck_clk_counter[2].CLK
 clk => sck_clk_counter[3].CLK
 clk => next_state~1.DATAIN
-reset => next_state.SS_UP.OUTPUTSELECT
 reset => next_state.PAYLOAD.OUTPUTSELECT
 reset => next_state.SS_DOWN.OUTPUTSELECT
 reset => next_state.IDLE.OUTPUTSELECT
@@ -178,7 +177,6 @@ starttx => mosi_data.OUTPUTSELECT
 starttx => mosi_data.OUTPUTSELECT
 starttx => mosi_data.OUTPUTSELECT
 starttx => mosi_data.OUTPUTSELECT
-starttx => next_state.OUTPUTSELECT
 starttx => next_state.OUTPUTSELECT
 starttx => next_state.OUTPUTSELECT
 starttx => next_state.OUTPUTSELECT

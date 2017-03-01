@@ -1,24 +1,23 @@
 module spi_master(input logic clk,
-						input logic reset,
-						input logic starttx,
-						input logic [7:0] d,
-						input logic miso,
-						output logic ss,
-						output logic sck,
-						output logic mosi,
-						output logic [7:0] q,
-						output logic finished);
+                  input logic reset,
+                  input logic starttx,
+                  input logic [7:0] d,
+                  input logic miso,
+                  output logic ss,
+                  output logic sck,
+                  output logic mosi,
+                  output logic [7:0] q,
+                  output logic finished);
 
 parameter CLOCK_DIV = 4;
 
-typedef enum logic [2:0] {
-	IDLE    = 3'b000,
-	SS_DOWN = 3'b001,
-	PAYLOAD = 3'b010,
-	SS_UP   = 3'b011
+typedef enum logic [1:0] {
+	IDLE    = 2'b00,
+	SS_DOWN = 2'b01,
+	PAYLOAD = 2'b10
 } state_t;
 
-state_t state, next_state;
+state_t state = IDLE, next_state = IDLE;
 logic [CLOCK_DIV - 1:0] sck_clk_counter = '0;
 logic [1:0] sck_buffer = '0;
 logic sck_en  = '0;
@@ -70,7 +69,9 @@ always_ff @(posedge clk, posedge reset) begin
             
             if (mosi_counter == 4'b1000) begin
                 sck_en <= '0;
-                next_state <= SS_UP;
+                ss <= '1;
+				finished <= '1;
+                next_state <= IDLE;
             end
             else if (sck_rise)
                 q <= {q[6:0], miso};
@@ -79,11 +80,6 @@ always_ff @(posedge clk, posedge reset) begin
                 mosi_data <= {mosi_data[6:0], 1'b0};
             end
             ss <= '0;
-        end
-        SS_UP: begin
-            ss <= '1;
-            finished <= '1;
-            next_state <= IDLE;
         end
         endcase
     end
